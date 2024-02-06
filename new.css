@@ -1,0 +1,604 @@
+/* GENERAL */
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+    background-image: url("assets/images/mainbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+}
+.point-only {
+    cursor: default;
+}
+.hoverable {
+    cursor: pointer;
+}
+
+/* COLORS */
+:root {
+    --primary: #0C5027;
+    --primary-transparent: #0c5027bb;
+    --secondary: #095646;
+    --accent: #5FB64E;
+    --emph: #007B59;
+    --light: #E6E7E2;
+}
+.bg-primary {
+    background-color: var(--primary);
+}
+.bg-secondary {
+    background-color: var(--secondary);
+}
+.bg-accent {
+    background-color: var(--accent);
+}
+.bg-light {
+    background-color: var(--light);
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;900&family=Open+Sans:wght@200;400;500;800&display=swap');
+
+
+
+
+
+/* NAVBAR */
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    padding: 0;
+}
+
+
+.navbar-container > 
+.nav-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    padding-left: 24px;
+}
+.navbar-container > 
+.nav-logo-container > .nav-logo-img {
+    height: 3rem;
+}
+
+
+.navbar-container >
+.navlink-row-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-container >
+.navlink-row-container > .navlink {
+    padding: 12px 24px;
+    margin: 4px;
+}
+.navbar-container >
+.navlink-row-container > .navlink > span {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+.navbar-container >
+.navlink-row-container > .navlink:hover {
+    border-radius: 500px;
+    background-color: white;
+    transition: 0.5s;
+}
+.navbar-container >
+.navlink-row-container > .navlink:hover > span {
+    color: black;
+    transition: 0.5s;
+}
+.navbar-container >
+.navlink-row-container > .active {
+    border-radius: 500px;
+    background-color: white;
+}
+.navbar-container >
+.navlink-row-container > .active > span {
+    color: black;
+}
+
+
+.navbar-container > 
+.end-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 24px;
+}
+.navbar-container > 
+.end-container > .end-button {
+    border-radius: 1rem;
+    padding: 10px 12px;
+    margin: 0px 8px;
+}
+.end-button > span {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+
+
+
+
+/* FACADE */
+.facade-section {
+    height: 85vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.facade-section .logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+
+    padding: 12px 24px;
+    box-shadow: 0px 4px 12px 3px;
+
+    background-color: white;
+    border-radius: 18px;
+}
+.facade-section .logo-container > .logo-img {
+    height: 48px;
+    margin: 0px 15px;
+}
+.facade-section .logo-container > .logo-img.logo-lg{
+    height: 81px;
+}
+
+.facade-section .hero {
+    background-image: url("assets/images/1bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 12px 12px -7px, inset 0 -12px 12px -7px;
+}
+
+
+
+
+/* HERO */
+.hero {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.hero > .hero-image-panel {
+    display: flex;
+    position: relative;
+}
+.hero > .hero-image-panel > .hero-image {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.hero > .hero-image-panel > .hero-image > img {
+    height: 0;
+    min-height: 100%;
+}
+
+
+.hero > .hero-caption-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 48px;
+    margin: 24px 0px;
+}
+.hero > .hero-caption-panel > .hero-header > span {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 5rem;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+.hero > .hero-caption-panel > .hero-text {
+    margin-top: 24px;
+}
+.hero > .hero-caption-panel > .hero-text > span {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: white;
+}
+
+
+.hero > .hero-tile-panel {
+    display: grid;
+    grid-template-rows: 120px 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+    padding: 0px 32px 32px 32px;
+}
+.hero > .hero-tile-panel > .title {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: flex;
+    margin: auto;
+
+    font-size: 5rem;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+.hero > .hero-tile-panel > .tile {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--light);
+    box-shadow: 2px 2px 8px 0px;
+    transition: 1s;
+    
+    border: 8px solid white;
+    border-radius: 16px;
+}
+.hero > .hero-tile-panel > .tile:hover {
+    background-color: var(--emph);
+    background-image: url("assets/images/iconfade.png");
+    background-size: cover;
+}
+
+.hero > .hero-tile-panel  > .tile > 
+.icon-container {
+    display: flex;
+    transition: 0.5s ease-out;
+}
+.hero > .hero-tile-panel  > .tile > 
+.icon-container > img {
+    width: 60%;
+    margin: 24px auto 12px auto;
+}
+.hero > .hero-tile-panel  > .tile > 
+.icon-title {
+    font-size: 3rem;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    color: var(--primary);
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+}
+.hero > .hero-tile-panel  > .tile > 
+.icon-title.small {
+    font-size: 2.5rem;
+}
+.hero > .hero-tile-panel > .tile:hover >
+.icon-title {
+    color: white;
+}
+
+
+
+/* CARDS SECTION */
+.cards-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:3fr 9fr;
+
+    height: 80vh;
+    min-height: 500px;
+    padding: 0px 64px 32px 64px;
+}
+.cards-section > .card-container {
+    grid-row-start: 2;
+    display: flex;
+    flex-grow: 1;
+    padding: 24px;
+}
+.cards-section > .card-container > 
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 4px solid white;
+
+    background-color: rgba(12, 80, 39, .75);
+    box-shadow: 4px 4px 12px 1px;
+}
+.cards-section > .card-container > 
+.card > .card-image {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.cards-section > .card-container > 
+.card > .card-image > img {
+    height:0;
+    min-height:140%;
+    transform: translateY(-10%);
+    transition: 0.5s;
+}
+.cards-section > .card-container > 
+.card > .card-caption > span {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: white;
+}
+.cards-section > .card-container > 
+.card > .card-caption {
+    margin-bottom: 36px;
+}
+
+    /* CARD SECTION - Hover Effect */
+.cards-section > .card-container > 
+.card:hover > .card-image > img {
+    height:0;
+    min-height:160%;
+    transform: translateY(-15%);
+}
+
+
+
+
+
+/* SERVICES SECTION */
+.services-section {
+    height: 100vh;
+    min-height: 500px;
+}
+.services-section .hero {
+    background-image: url("assets/images/2bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 12px 12px -7px, inset 0 -12px 12px -7px;
+}
+
+
+
+/* HOW SECTION */
+.how-section {
+    height: 70vh;
+    min-height: 500px;
+    padding: 32px;
+}
+
+.how-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--primary-transparent);
+    border-radius: 32px;
+}
+.how-header {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    color: white;
+    margin-top: 32px;
+}
+.how-container > .how-image {
+}
+.how-container > .how-image > img {
+}
+
+
+
+
+
+/* ELEVATE SECTION */
+.elevate-section {
+    height: 50vh;
+}
+.elevate-section > .hero {
+    grid-template-columns: 1fr;
+    background-image: url("assets/images/midbanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 12px 12px -7px, inset 0 -12px 12px -7px;
+}
+.elevate-section > .hero >.hero-caption-panel {
+    padding: 0px;
+}
+.elevate-section > .hero >.hero-caption-panel > .hero-header > span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 5.5rem;
+}
+
+
+
+
+
+/* APP SECTION */
+.app-section {
+    height: 120vh;
+}
+.app-section .hero > .hero-image-panel > .hero-image {
+    transform: translateY(-12%);
+}
+.app-section .hero > .hero-caption-panel span {
+    color: black;
+}
+.app-section .download-btn {
+    width: 250px;
+}
+
+
+
+
+/* FOOTER */
+.footer-section {
+    height: 240px;
+}
+.footer {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 5fr;
+    grid-template-rows: auto;
+
+    padding-top: 48px;
+
+    background-image: url("assets/images/footerbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 12px 12px -7px;
+}
+
+.footer > .socials {
+    display: flex;
+    flex-direction: column;
+}
+.footer > .logo-container {
+    display: flex;
+    flex-grow: 1;
+}
+.footer > .socials > .logo-container > .logo-img > img {
+    height: 4rem;
+}
+.footer > .socials > .logo-container > .logo-img,
+.footer > .socials > .logo-container > .logo-caption {
+    display: flex;
+    justify-content: center;
+}
+.footer > .socials > .logo-container > .logo-caption {
+    margin-top: -8px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+}
+
+.footer > .docs {
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
+}
+.footer > .docs > span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: white;
+    margin: 6px;
+}
+.footer > .docs > span.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    /* font-weight: regular; */
+    color: white;
+    margin: 16px;
+}
+
+
+.footer > .install {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.footer > .install > span.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin: 16px;
+}
+.footer > .install img.download-btn {
+    width: 200px;
+}
+
+
+.footer > .subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 48px;
+
+    /* align-items: center; */
+}
+.footer > .subscribe > span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 16px;
+}
+.footer > .subscribe > span.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.footer > .subscribe > .form {
+    display: flex;
+    
+}
+.footer > .subscribe > .form > .input-text {
+    display: flex;
+    flex-grow: 1;
+}
+.footer > .subscribe > .form > .input-text > input {
+    width: 100%;
+    padding: 6px 12px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+.footer > .subscribe > .form > .subscribe-button {
+    background-color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: 0.5s;
+}
+.footer > .subscribe > .form > .subscribe-button > span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    transition: 0.5s;
+}
+.footer > .subscribe > .form > .subscribe-button:hover {
+    background-color: var(--primary);
+}
+.footer > .subscribe > .form > .subscribe-button:hover > span {
+    color: white;
+}
+
